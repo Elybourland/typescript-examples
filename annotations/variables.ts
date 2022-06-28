@@ -1,4 +1,5 @@
 // Understaind type inference
+// If you're using declaration and initialization of variable on same line, typescript will use type inference
 
 let apples: number = 5;
 let speed: string = 'fast';
@@ -36,3 +37,10 @@ let point: { x: number; y: number; } = {
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
+
+//When to use annotations
+// (1) Function that return the 'any' type
+
+const json = '{"x": 10, "y": 20}';
+const coordinates: { x: number; y: number } = JSON.parse(json); // without annotation of number, you would get 'any' type
+console.log(coordinates);

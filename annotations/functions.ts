@@ -14,3 +14,11 @@ const subtract = (a: number, b: number) => {
 const divide = (a: number, b: number): number => {
   return a / b;
 };
+
+function multiply(a: number, b: number): number {
+  return a * b;
+}
+
+const anotherMultiply = function(a: number, b: number): number {
+  return a * b;
+}

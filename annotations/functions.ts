@@ -29,4 +29,24 @@ const logger = (message: string): void => {
 
 const throwError = (message: string): never => {
   throw new Error(message);
-}
+};
+
+const todaysWeather = {
+  date: new Date(),
+  weather: 'sunny'
+};
+
+// const logWeather = (forecast: { date: Date, weather: string}): void => {
+//   console.log(forecast.date);
+//   console.log(forecast.weather);
+// };
+
+// Destructuring with annotations
+// Destructuring first, then the annotations
+
+const logWeather = ({ date, weather}: { date: Date, weather: string }): void => {
+  console.log(date);
+  console.log(weather);
+};
+
+logWeather(todaysWeather);

@@ -1,7 +1,7 @@
-interface Vehicle {
-  name: string;
-  year: Date;
-  broken: boolean;
+interface Reportable {
+  // name: string;
+  // year: Date;
+  // broken: boolean;
   summary(): string;
 }
 
@@ -14,10 +14,10 @@ const oldCivic = {
   }
 };
 
-const printVehicle = (vehicle: Vehicle): void => {
-  console.log(vehicle.summary());
+const printSummary = (item: Reportable): void => {
+  console.log(item.summary());
 };
 
-// oldCivic must have a name, year, and broken
+// oldCivic must have a summary function
 
-printVehicle(oldCivic);
+printSummary(oldCivic);

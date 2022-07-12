@@ -1,16 +1,24 @@
 class Vehicle {
-  drive(): void {
-    console.log('chugga chugga');
-  }
+  // public drive(): void {
+  //   console.log('chugga chugga');
+  // }
 
-  honk(): void {
+  protected honk(): void {
     console.log('beep');
   }
 }
 
+const van = new Vehicle();
+// van.honk();
+
 class Truck extends Vehicle{
-  drive(): void {
+  private drive(): void {
     console.log('vroom!');
+  }
+
+  startDrivingProcess(): void {
+    this.drive();
+    this.honk();
   }
 }
 
@@ -19,5 +27,5 @@ class Truck extends Vehicle{
 // vehicle.honk();
 
 const truck = new Truck();
-truck.drive();
+truck.startDrivingProcess();
 truck.honk();
